@@ -15,6 +15,7 @@
 		D8A29390292F002800ECF103 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A2938F292F002800ECF103 /* LocationManager.swift */; };
 		D8A29393292F165100ECF103 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A29392292F165100ECF103 /* Landmark.swift */; };
 		D8A29395292F171A00ECF103 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A29394292F171A00ECF103 /* LandmarkAnnotation.swift */; };
+		D8A29397292FAEDA00ECF103 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A29396292FAEDA00ECF103 /* PlaceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D8A2938F292F002800ECF103 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D8A29392292F165100ECF103 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		D8A29394292F171A00ECF103 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		D8A29396292FAEDA00ECF103 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A2938C292EF8C800ECF103 /* MapView.swift */,
+				D8A29396292FAEDA00ECF103 /* PlaceListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				D8A29380292EDC9A00ECF103 /* ContentView.swift in Sources */,
 				D8A29395292F171A00ECF103 /* LandmarkAnnotation.swift in Sources */,
 				D8A2938D292EF8C800ECF103 /* MapView.swift in Sources */,
+				D8A29397292FAEDA00ECF103 /* PlaceListView.swift in Sources */,
 				D8A2937E292EDC9A00ECF103 /* NearMeAppSwiftUIApp.swift in Sources */,
 				D8A29393292F165100ECF103 /* Landmark.swift in Sources */,
 			);
