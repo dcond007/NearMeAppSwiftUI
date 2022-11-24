@@ -6,16 +6,45 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+    @ObservedObject var locationManager = LocationManager()
+    @State private var search: String = ""
+    // Array of landmarks
+    @State private var landmarks: [Landmark] = [Landmark]()
+    
+    
+    private func getNearByLandmarks() {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = search
+        
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if let response = response {
+                let mapItems = response.mapItems
+                self.landmarks = mapItems.map{
+                    Landmark(placemark: $0.placemark)
+                }
+                
+            }
         }
-        .padding()
+    }
+    
+    var body: some View {
+        ZStack(alignment: .top)  {
+            MapView(landmarks: landmarks)
+             
+            TextField("Search", text: $search, onEditingChanged: { _ in })
+            {
+                // commit
+                self.getNearByLandmarks()
+            }
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding()
+            .offset(y:30)
+        }
     }
 }
 

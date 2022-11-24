@@ -11,6 +11,10 @@
 		D8A29380292EDC9A00ECF103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A2937F292EDC9A00ECF103 /* ContentView.swift */; };
 		D8A29382292EDC9B00ECF103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A29381292EDC9B00ECF103 /* Assets.xcassets */; };
 		D8A29385292EDC9B00ECF103 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A29384292EDC9B00ECF103 /* Preview Assets.xcassets */; };
+		D8A2938D292EF8C800ECF103 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A2938C292EF8C800ECF103 /* MapView.swift */; };
+		D8A29390292F002800ECF103 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A2938F292F002800ECF103 /* LocationManager.swift */; };
+		D8A29393292F165100ECF103 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A29392292F165100ECF103 /* Landmark.swift */; };
+		D8A29395292F171A00ECF103 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A29394292F171A00ECF103 /* LandmarkAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		D8A2937F292EDC9A00ECF103 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8A29381292EDC9B00ECF103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A29384292EDC9B00ECF103 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8A2938C292EF8C800ECF103 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D8A2938F292F002800ECF103 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D8A29392292F165100ECF103 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		D8A29394292F171A00ECF103 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,9 @@
 		D8A2937C292EDC9A00ECF103 /* NearMeAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D8A29391292F164400ECF103 /* Models */,
+				D8A2938E292EFFF600ECF103 /* Managers */,
+				D8A2938B292EF8B700ECF103 /* Views */,
 				D8A2937D292EDC9A00ECF103 /* NearMeAppSwiftUIApp.swift */,
 				D8A2937F292EDC9A00ECF103 /* ContentView.swift */,
 				D8A29381292EDC9B00ECF103 /* Assets.xcassets */,
@@ -65,6 +76,31 @@
 				D8A29384292EDC9B00ECF103 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8A2938B292EF8B700ECF103 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8A2938C292EF8C800ECF103 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8A2938E292EFFF600ECF103 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D8A2938F292F002800ECF103 /* LocationManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		D8A29391292F164400ECF103 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8A29392292F165100ECF103 /* Landmark.swift */,
+				D8A29394292F171A00ECF103 /* LandmarkAnnotation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A29390292F002800ECF103 /* LocationManager.swift in Sources */,
 				D8A29380292EDC9A00ECF103 /* ContentView.swift in Sources */,
+				D8A29395292F171A00ECF103 /* LandmarkAnnotation.swift in Sources */,
+				D8A2938D292EF8C800ECF103 /* MapView.swift in Sources */,
 				D8A2937E292EDC9A00ECF103 /* NearMeAppSwiftUIApp.swift in Sources */,
+				D8A29393292F165100ECF103 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +310,7 @@
 				DEVELOPMENT_TEAM = 2M5H6T53K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tasty food awaits...";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +340,7 @@
 				DEVELOPMENT_TEAM = 2M5H6T53K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Tasty food awaits...";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
